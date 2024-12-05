@@ -29,6 +29,7 @@ pub fn build(b: *std.Build) void {
 
     exe.root_module.addImport("zeptolibc", zeptolibc_dep.module("zeptolibc"));
 
+    exe.addIncludePath(zeptolibc_dep.path("src/"));
     exe.addIncludePath(b.path("src/"));
 
     // This declares intent for the executable to be installed into the
