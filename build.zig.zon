@@ -24,7 +24,7 @@
     // internet connectivity.
     .dependencies = .{
         .zeptolibc = .{
-            .url = "/Users/trj/org/zig/git/zeptolibc",
+            .url = "git+https://github.com/ringtailsoftware/zeptolibc.git#602a923f112b734008dcd40edb8986f270b3d245",
             .hash = "12202d3462b83947191fee3c5953d77bad5e9427f9e3dd05e09b2bee54e2edae98f2",
         },
     },
