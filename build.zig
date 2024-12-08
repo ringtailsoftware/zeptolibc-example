@@ -17,7 +17,7 @@ pub fn build(b: *std.Build) void {
 
     const exe = b.addExecutable(.{
         .name = "zeptolibc-example",
-        .root_source_file = b.path("src/main.zig"),
+        .root_source_file = b.path("src/helloworld.zig"),
         .target = target,
         .optimize = optimize,
     });
@@ -28,8 +28,8 @@ pub fn build(b: *std.Build) void {
     });
 
     exe.root_module.addImport("zeptolibc", zeptolibc_dep.module("zeptolibc"));
+    exe.addIncludePath(zeptolibc_dep.path("include"));
 
-    exe.addIncludePath(zeptolibc_dep.path("src/"));
     exe.addIncludePath(b.path("src/"));
 
     // This declares intent for the executable to be installed into the

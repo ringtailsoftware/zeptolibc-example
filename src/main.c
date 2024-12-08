@@ -1,4 +1,4 @@
-#include "zeptolibc.h"
+#include <zeptolibc/zeptolibc.h>
 
 void cmain(void) {
     uint8_t *buf;
